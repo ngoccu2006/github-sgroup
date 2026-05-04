@@ -1,0 +1,100 @@
+.main-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#red_color {
+  color: #b00000;
+}
+
+.inline-block_p {
+  display: inline-block;
+}
+
+#orange_color {
+  color: #d24637;
+}
+
+#pink_color {
+  color: #ca1a70;
+}
+
+#font_small_size {
+  font-size: 6.4px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border: 1px solid #555;
+}
+
+.color-444 {
+  background-color: #444;
+}
+
+.color-454545 {
+  background-color: #454545;
+}
+
+.content-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.photo-area {
+  flex: 0 0 350px;
+  margin: 0;
+}
+
+.photo-area img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo-area figcaption {
+  font-size: 0.85em;
+  color: #888;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.text-area {
+  flex: 1;
+}
+
+.text-area p {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  line-height: 1.6;
+}
+
+.text-area a {
+  color: #b00;
+  text-decoration: underline;
+}
+
+.kopimi_icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2em;
+}
+
+.divider {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.divider img {
+  width: 40px;
+  height: auto;
+}
