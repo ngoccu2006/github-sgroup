@@ -1,0 +1,24 @@
+.box{
+    width: 500px;
+    height: 920px;
+    margin:0 auto;
+    padding: 5px;
+    border: groove 5px yellow;
+}
+
+.box1{
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    border: 5px dashed red;
+    overflow-y: auto;
+    padding: 0 50px;
+    background-color: yellow;
+}
+
+img{
+    width: 400px;
+    height: 500px;
+    margin: 50px 0;
+    border: groove 5px blue;
+}
