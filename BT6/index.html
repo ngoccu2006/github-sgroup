@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+
+        body{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
+        .body-container-header{
+            width: 1000px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            background-color: white;
+            z-index:5;
+            transition: all 0.3s ease;
+        }
+
+        .box-header{
+            width: 950px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin : 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .box-poster{
+            width: 920px;
+            height: 100%;
+        }
+
+        .box-logo{
+            width: 250px;
+            height: 100%;
+            gap: 10px;
+            flex-direction: row;
+            display: flex;
+        }
+
+        .box-j{
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-j span{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .box-jasonstroff{
+            width: 180px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-socials {
+            display: flex;
+            gap: 15px;
+        }
+        .icon-social {
+            width: 32px;
+            height: 32px;
+            background-color: rgb(238, 93, 90);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.2s;
+        }
+
+        .icon-social:hover {
+            opacity: 0.8;
+        }
+        .body-container{
+            width: 1000px;
+            height: 600px;
+            margin: auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        .row{
+            width: 960px;
+            height: 500px;
+            display: flex;
+            gap: 75px;
+        }
+        .row-img{
+            width: 400px;
+            height: 550px;
+            overflow: hidden;
+        }
+        .row-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .row-txt{
+            width: 450px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .row-txt-js{
+            font-size: 48px;
+            font-weight: bold;
+            color:black;
+        }
+
+        .row-score{
+            display: flex;
+            flex-direction: row;
+            gap: 80px;
+        }
+
+        .box1{
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            color: rgb(212, 41, 69);
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .box1 p{
+            font-size: 20px;
+        }
+
+
+        .about-section{
+            width: 1000px;
+            height: 520px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container-section1{
+            width: 940px;
+            height: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .box-aboutme{
+            width: 140px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .box-aboutme h2{
+            margin: 0;
+            
+        }
+        .thanh-ngang{
+            margin-top: 5px;
+            background-color: rgb(192, 21, 49);
+            height: 4px;
+            width: 100%;
+        }
+
+        .box-lorem{
+            font-size: 26px;
+            font-family: sans-serif;
+
+        }
+
+        .box-button-download{
+            margin-top: 30px;
+            width: 936px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .edit-button{
+            background-color: white;
+            border: 2px solid red;
+            color: red;
+            padding: 12px 30px; 
+            font-weight: bold;  
+            border-radius: 20px; 
+            cursor: pointer;    
+            transition: background 0.3s;        
+        }
+
+        .edit-button:hover{
+            background-color: red;
+            color: white;
+        }
+
+        .skill-section{
+            width: 1000px;
+            height: 350px;
+        }
+
+        .box-skill-section{
+            width: 100%;
+            height: 245px;
+        }
+
+        .row-skill{
+            width: 960px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .core-skill{
+            width: 50%;
+            height: 100%;
+        }
+
+        .box-core-skill{
+            width: 180px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .box-core-skill h2{
+            margin: 0;
+        }
+
+        .other-skill{
+            width: 50%;
+            height: 100%;
+        }
+
+        .box-other-skill{
+            width: 180px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .box-other-skill h2{
+            margin: 0;
+        }
+
+        .box-button-core-skill{
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .edit-button-skill{
+            background-color: white;
+            border: 2px solid rgb(240, 225, 225);
+            padding: 12px 30px; 
+            font-weight: bold;  
+            border-radius: 20px; 
+            font-size: 16px;
+        }
+
+        .box-button-other-skill{
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+
+        .box-exp{
+            width: 1000px;
+            height: 580px;
+        }
+        .box-exp-container{
+            width: 960px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box-experience{
+            width: 260px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .box-exp h2{
+            margin: 0;
+        }
+
+        .box-chuachung2vb{
+            width: 100%;
+            height: 480px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box-2019{
+            width: 50%;
+            height: 100%;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .txt1{
+            color: #373737;
+            font-size: 22px;
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+
+        .txt2{
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .txt3{
+            color: #373737;
+            font-weight: 800;
+            font-size: 24px;
+            padding-bottom: 30px;
+        }
+        .box-2018-2019{
+            width: 50%;
+            height: 100%;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+
+        .box-least{
+            width: 1000px;
+            height: 1600px;
+        }
+
+        .box-least1{
+            width: 960px;
+            height: 1490px;
+        }
+
+        .box-least-work{
+            width: 180px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .box-least-work h2{
+            margin: 0;
+        }
+
+        .list-section{
+            width: 930px;
+            height: 1440px;
+        }
+
+        .work-section{
+            padding-left: 70px;
+            padding-top: 40px;
+            padding-right: 70px;
+            background-color: #F6F8FA;
+            margin-bottom: 40px;
+        }
+
+        .work-row{
+            width: 820px;
+            height: 410px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box-left{
+            width: 55%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+        }
+
+        .box-right{
+            width: 45%;
+            height: 400px;
+        }
+
+        .box-right img{
+            width: 310px;
+            height: 310px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .box-end{
+            width: 1000px;
+            height: 580px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-end-container{
+            width: 960px;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="body-container-header">
+        <div class="box-header">
+            <div class="box-poster">
+                <div class="box-logo">
+                    <div class="box-j">
+                        <span>J</span>
+                    </div>
+
+                    <div class="box-jasonstroff">
+                        <div> JASON STROFF</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-socials">
+                <a href="#" class="icon-social"><i class="fab fa-github"></i></a>
+                <a href="#" class="icon-social"><i class="fab fa-stack-overflow"></i></a>
+                <a href="#" class="icon-social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="body-container">
+        <div class="row">
+            <div class="row-img">
+                <img src="profile-image.jpg">
+            </div>
+
+            <div class="row-txt">
+                <h1>HI THERE</h1>
+                
+                <div class="row-txt-js">
+                    I’m Jason Stroff
+                    UI/UX DESIGNER + DEVELOPER based in Florida.
+
+                </div>
+
+                <div class="row-score">
+                    <div class="box1">
+                        6+
+                        <p>Experience</p>
+                    </div>
+
+                    <div class="box1">
+                        89
+                        <p>Projects</p>
+                    </div>
+                    <div class="box1">
+                        52
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="container-section1">
+            <section>
+                <div class="box-aboutme">
+                    <h2> 
+                        ABOUT ME
+                    </h2>
+                    <div class="thanh-ngang"></div>
+                </div>
+
+                <div class="box-lorem">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit tortor, ultricies in quam ut, luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum tellus. Integer bibendum eget dolor nec venenatis. Aliquam erat volutpat. Etiam et est vitae turpis accumsan vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.
+                </div>
+                
+                <div class="box-button-download">
+                    <button type="button" class="edit-button">
+                        DOWNLOAD RESUME
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="skill-section">
+        <div class="box-skill-section">
+            <div class="row-skill">
+                <div class="core-skill">
+                    <div class="box-core-skill">
+                        <h2> 
+                            CORE SKILLS
+                        </h2>
+                        <div class="thanh-ngang"></div>
+                    </div>
+
+                    <div class="box-button-core-skill">
+                        <button type="button" class="edit-button-skill">
+                            JavaScript
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Node.js
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Express.js
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            MongoDB
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Vue.js
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            React
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Sequelize
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Github
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            HTML
+                        </button>
+                    </div>
+                </div>
+
+                <div class="other-skill">
+                    <div class="box-other-skill">
+                        <h2>
+                            OTHER SKILLS
+                        </h2>
+                        <div class="thanh-ngang"></div>
+                    </div>
+                    <div class="box-button-other-skill">
+                        <button type="button" class="edit-button-skill">
+                            Storyblok
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            PWAs
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Responsive Web Design
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            React
+                        </button>
+                        <button type="button" class="edit-button-skill">
+                            Vuetify
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-exp">
+        <div class="box-exp-container">
+            <div class="box-experience">
+                <h2>
+                    WORK EXPERIENCE
+                </h2>
+                <div class="thanh-ngang"></div>
+            </div>
+
+            <div class="box-chuachung2vb">
+                <div class="box-2019">
+                    <section>
+                        <span class="txt1">2019 - Present</span>
+                        <h3 class="txt2"> Matrix Media Inc</h3>
+                        <span class="txt3"> Full Stack developer </span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="box-2018-2019">
+                    <section>
+                        <span class="txt1">2018 - 2019</span>
+                        <h3 class="txt2"> Lexind</h3>
+                        <span class="txt3"> Senior app developer </span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-least">
+        <div class="box-least1">
+            <div class="box-least-work">
+                <h2>
+                    LEAST WORKS
+                </h2>
+                <div class="thanh-ngang"></div>
+            </div>
+
+            <div class="list-section">
+                <div class="work-section">
+                    <div class="work-row">
+                        <div class="box-left">
+                            <section>
+                                <h1> Tripy mobile app </h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                                <button type="button" class="edit-button">
+                                    DETAILS
+                                </button>
+                            </section>
+                        </div>
+
+                        <div class="box-right">
+                            <img src="https://www.designstub.com/demos/defolio/assets/images/work-1.jpg" alt="anh">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-section">
+                    <div class="work-row">
+                        <div class="box-left">
+                            <section>
+                                <h1> Hello mobile app </h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                                <button type="button" class="edit-button">
+                                    DETAILS
+                                </button>
+                            </section>
+                        </div>
+
+                        <div class="box-right">
+                            <img src="https://www.designstub.com/demos/defolio/assets/images/work-2.jpg" alt="anh">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-section">
+                    <div class="work-row">
+                        <div class="box-left">
+                            <section>
+                                <h1> Cute cookies app </h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                                <button type="button" class="edit-button">
+                                    DETAILS
+                                </button>
+                            </section>
+                        </div>
+
+                        <div class="box-right">
+                            <img src="https://www.designstub.com/demos/defolio/assets/images/work-3.jpg" alt="anh">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="box-end">
+        <div class="box-end-container">
+            <span>STAY IN TOUCH</span>
+            <h2> READY TO TALK?</h2>
+            <p>Feel free to contact us</p>
+            <button type="button" class="edit-button">
+                LETS TALK
+            </button>
+        </div>
+    </footer>
+</body>
+</html>
