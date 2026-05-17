@@ -12,17 +12,25 @@
             margin: 0;
             padding: 0;
             background-color: white;
+            overflow-x: hidden; 
         }
         
         .body-container-header{
             width: 1000px;
-            height: 120px;
+            height: 120px; 
             display: flex;
             align-items: center;
-            position: fixed;
+            position: sticky;
+            top: 0;
+            margin: 0 auto; 
             background-color: white;
-            z-index:5;
-            transition: all 0.3s ease;
+            z-index: 5;
+            transition: all 0.3s ease; 
+        }
+
+        .body-container-header.scrolled {
+            height: 70px; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
         }
 
         .box-header{
@@ -92,10 +100,11 @@
         .icon-social:hover {
             opacity: 0.8;
         }
+        
         .body-container{
             width: 1000px;
             height: 600px;
-            margin: auto 25px;
+            margin: 30px auto 50px auto; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -162,6 +171,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            margin: 0 auto; 
         }
 
         .container-section1{
@@ -228,6 +238,7 @@
         .skill-section{
             width: 1000px;
             height: 350px;
+            margin: 0 auto; 
         }
 
         .box-skill-section{
@@ -307,6 +318,7 @@
         .box-exp{
             width: 1000px;
             height: 580px;
+            margin: 0 auto; 
         }
         .box-exp-container{
             width: 960px;
@@ -372,6 +384,7 @@
         .box-least{
             width: 1000px;
             height: 1600px;
+            margin: 0 auto; 
         }
 
         .box-least1{
@@ -439,6 +452,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 auto; 
         }
         .box-end-container{
             width: 960px;
@@ -450,10 +464,228 @@
             font-size: 24px;
             color: white;
         }
+        @media screen and (max-width: 1024px) {
+            .body-container-header, 
+            .body-container, 
+            .about-section, 
+            .skill-section, 
+            .box-exp, 
+            .box-least, 
+            .box-end {
+                width: 100%;
+                height: auto;
+            }
+
+            .body-container-header {
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+
+            .box-header, 
+            .row, 
+            .container-section1, 
+            .row-skill, 
+            .box-exp-container, 
+            .box-least1, 
+            .list-section, 
+            .box-end-container, 
+            .box-button-download {
+                width: 90%;
+                height: auto;
+            }
+
+            .box-poster {
+                width: 100%;
+            }
+
+            .row-img {
+                width: 45%;
+                height: auto;
+            }
+
+            .row-txt {
+                width: 55%;
+                gap: 30px;
+            }
+
+            .row-txt-js {
+                font-size: 35px;
+            }
+
+            .row {
+                gap: 30px;
+            }
+
+            .box-chuachung2vb, 
+            .work-row {
+                height: auto;
+            }
+
+            .work-section {
+                width: auto;
+                padding: 30px;
+            }
+
+            .work-row {
+                width: 100%;
+            }
+
+            .box-left {
+                width: 60%;
+                height: auto;
+            }
+
+            .box-right {
+                width: 40%;
+                height: auto;
+            }
+
+            .box-right img {
+                width: 100%;
+                height: auto;
+            }
+
+            .box-lorem {
+                font-size: 20px;
+                text-align: justify;
+            }
+
+            .about-section {
+                padding-bottom: 50px;
+            }
+
+            .skill-section {
+                padding: 50px 0;
+            }
+
+            .box-exp {
+                padding: 50px 0;
+            }
+
+            .box-least {
+                padding: 50px 0;
+            }
+
+            .box-end {
+                padding: 50px 0;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .box-jasonstroff {
+                display: none;
+            }
+
+            .body-container {
+                margin-top: 30px;
+            }
+
+            .row {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .row-img {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .row-txt {
+                width: 100%;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .row-score {
+                width: 100%;
+                justify-content: space-around;
+                gap: 0;
+            }
+
+            .row-skill {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .core-skill, 
+            .other-skill {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box-button-core-skill, 
+            .box-button-other-skill {
+                justify-content: center;
+            }
+
+            .box-chuachung2vb {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .box-2019, 
+            .box-2018-2019 {
+                width: 100%;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .work-row {
+                flex-direction: column;
+            }
+
+            .box-left {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                padding-bottom: 20px;
+            }
+
+            .box-right {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .box-right img {
+                max-width: 300px;
+            }
+
+            .box-socials {
+                display: none;
+            }
+
+            .box-aboutme {
+                width: 100%;
+                align-items: center;
+            }
+
+            .box-experience {
+                width: 100%;
+                align-items: center;
+                height: auto;
+            }
+
+            .box-least-work {
+                width: 100%;
+                align-items: center;
+            }
+
+            .txt2 {
+                font-size: 24px;
+            }
+
+            .txt3 {
+                font-size: 20px;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <header class="body-container-header">
+    <header class="body-container-header" id="mainHeader">
         <div class="box-header">
             <div class="box-poster">
                 <div class="box-logo">
@@ -487,7 +719,6 @@
                 <div class="row-txt-js">
                     I’m Jason Stroff
                     UI/UX DESIGNER + DEVELOPER based in Florida.
-
                 </div>
 
                 <div class="row-score">
@@ -719,5 +950,16 @@
             </button>
         </div>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
